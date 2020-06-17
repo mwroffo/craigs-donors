@@ -1,5 +1,19 @@
-FROM python:3
+# Use node 4.4.5 LTS
+FROM node:4.4.5
+ENV LAST_UPDATED 20160605T165400
 
-EXPOSE 8001
+# Copy source code into container
 
-CMD ["python", "-m", "http.server"]
+COPY . /app
+
+# Change working directory
+WORKDIR /app
+
+# Install dependencies
+RUN npm install
+
+# Expose API port to the outside
+EXPOSE 80
+
+# Launch application
+CMD ["npm","start"]
