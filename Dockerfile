@@ -13,7 +13,7 @@ WORKDIR /app
 RUN npm install
 
 # Expose API port to the outside
-EXPOSE 80
+EXPOSE 8080
 
-# Launch application
-CMD ["npm","start"]
+# Launch development server
+CMD ["ionic","serve", "--port=8080"]
