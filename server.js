@@ -3,7 +3,7 @@ var fs = require('fs');
 var url = require('url');
 
 const PUBLIC_IP = '3.12.25.70';
-const PRIVATE_IP = '172.31.22.30';
+const PRIVATE_IP = '0.0.0.0';
 const PORT = 8080;
 http.createServer( function (request, response) {
   var pathname = url.parse(request.url).pathname;
