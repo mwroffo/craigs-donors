@@ -1,19 +1,19 @@
-# Use node 4.4.5 LTS
-FROM node:4.4.5
-ENV LAST_UPDATED 20160605T165400
+FROM node:12
 
-# Copy source code into container
+# Create app directory
+WORKDIR /usr/src/app
 
-COPY . /app
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+# COPY package*.json ./
 
-# Change working directory
-WORKDIR /app
+# RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
 
-# Install dependencies
-RUN npm install
+# Bundle app source
+COPY . .
 
-# Expose API port to the outside
 EXPOSE 8080
-
-# Launch development server
-CMD ["ionic","serve", "--port=8080"]
+CMD [ "node", "server.js" ]
