@@ -1,0 +1,20 @@
+{
+  "name": "craigs-donors",
+  "version": "1.0.0",
+  "description": "Lets donors find best ways to donate",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwroffo/craigs-donors.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mwroffo/craigs-donors/issues"
+  },
+  "homepage": "https://github.com/mwroffo/craigs-donors#readme"
+}
