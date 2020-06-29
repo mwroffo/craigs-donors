@@ -1,7 +1,0 @@
-{
-  "name": "craigs-d2",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
