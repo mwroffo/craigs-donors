@@ -2,15 +2,13 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import React from 'react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 const Home: React.FC = () => {
   return (
+    <div>
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Blank</IonTitle>
-        </IonToolbar>
-      </IonHeader>
+    <AmplifySignOut />
       <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
@@ -20,7 +18,8 @@ const Home: React.FC = () => {
         <ExploreContainer />
       </IonContent>
     </IonPage>
+  </div>
   );
 };
 
-export default Home;
+export default withAuthenticator(Home);
