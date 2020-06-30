@@ -6,7 +6,13 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route path="/" exact component={App} />
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
   </React.StrictMode>,
   document.getElementById('root')
 );
