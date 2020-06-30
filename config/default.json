@@ -1,6 +1,6 @@
 {
     "dynamodbURI": {
         "region": "us-east-1",
-        "endpoint": "https://iws9pqk8ui.execute-api.us-east-1.amazonaws.com/v1"
+        "endpoint": "https://dynamodb.us-east-1.amazonaws.com"
     }
 }
