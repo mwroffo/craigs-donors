@@ -1,9 +1,6 @@
 {
-    "Charity": {
-        "dbConfig": {
-            "host": "localhost",
-            "port": 3000,
-            "dbName": "charities"
-        }
+    "dynamodbURI": {
+        "region": "us-east-1",
+        "endpoint": "https://iws9pqk8ui.execute-api.us-east-1.amazonaws.com/v1"
     }
 }
