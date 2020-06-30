@@ -4,6 +4,7 @@
   "description": "## test Express.js endpoint: ```node server.js``` ```curl -i localhost:3000/hello```",
   "main": "server.js",
   "dependencies": {
+    "aws-sdk": "^2.707.0",
     "axios": "^0.19.2",
     "config": "^3.3.1",
     "express": "^4.17.1",
