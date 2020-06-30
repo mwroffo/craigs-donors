@@ -4,6 +4,8 @@
   "description": "## test Express.js endpoint: ```node server.js``` ```curl -i localhost:3000/hello```",
   "main": "server.js",
   "dependencies": {
+    "@ionic/react": "^5.2.2",
+    "@ionic/react-router": "^5.2.2",
     "aws-sdk": "^2.707.0",
     "axios": "^0.19.2",
     "config": "^3.3.1",
