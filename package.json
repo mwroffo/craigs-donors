@@ -29,13 +29,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mwroffo/craigs-donors.git"
+    "url": "git+https://github.com/craigs-donors/craigs-donors.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mwroffo/craigs-donors/issues"
+    "url": "https://github.com/craigs-donors/craigs-donors/issues"
   },
-  "homepage": "https://github.com/mwroffo/craigs-donors#readme"
+  "homepage": "https://github.com/craigs-donors/craigs-donors#readme"
 }
