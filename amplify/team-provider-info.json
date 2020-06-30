@@ -13,7 +13,9 @@
         },
         "categories": {
             "auth": {
-                "craigsdonorsdbe22dff": {}
+                "craigsdonorsdbe22dff": {
+                    "hostedUIProviderCreds": "[]"
+                }
             }
         }
     }
