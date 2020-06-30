@@ -1,5 +1,13 @@
 # craigs-donors
 
+## Be sure your deps are updated:
+From craigs-donors directory, do
+```
+npm i # install backend deps
+cd client
+yarn # install frontend/client deps
+```
+
 ## test Express.js endpoint:
 ```npm run server```
 ```curl -i localhost:3000/hello```
@@ -9,5 +17,11 @@
 
 ## full dev run:
 ```npm run dev```
+
+## Test Node/dynamodb link:
+Open `test/testGetItem.js` then **edit the `params` variable as necessary for your particular dynamodb configuration, i.e. tables, primary keys, etc.**
+Finally, 
+```node test/testGetItem.js```
+should return JSON.
 
 See `scripts` in `package.json` for details on these launch scripts.
