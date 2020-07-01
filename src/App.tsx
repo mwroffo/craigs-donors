@@ -29,16 +29,18 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+
+        {/* Testing of the Home Page */}
         <Route path="/home" component={Home} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/home" />} />
 
         {/* Testing of the Donate Page */}
-        {/* <Route path="/donatepage" component={DonatePage} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/donatepage" />} /> */}
+        <Route path="/donatepage" component={DonatePage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/donatepage" />} />
 
         {/* Testing of the Donate Confirmation Page */}
-        {/* <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
-        <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />         */}
+        <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />        
 
       </IonRouterOutlet>
     </IonReactRouter>
