@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-craigsdonors-dev-103605-authRole",
+            "UnauthRoleArn": "arn:aws:iam::453101909370:role/amplify-craigsdonors-dev-103605-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::453101909370:role/amplify-craigsdonors-dev-103605-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-craigsdonors-dev-103605-deployment",
+            "UnauthRoleName": "amplify-craigsdonors-dev-103605-unauthRole",
+            "StackName": "amplify-craigsdonors-dev-103605",
+            "StackId": "arn:aws:cloudformation:us-east-1:453101909370:stack/amplify-craigsdonors-dev-103605/7c18e7d0-bb56-11ea-bf7f-0ad23187ddb2",
+            "AmplifyAppId": "d36no0hyh60htl"
+        },
+        "categories": {
+            "auth": {
+                "craigsdonorsd9d65abc": {}
+            }
+        }
+    }
+}
