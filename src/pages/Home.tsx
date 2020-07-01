@@ -15,7 +15,7 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar class="toolbar-top">
-          <IonTitle>Craig's Donors</IonTitle>          
+        <IonTitle size="small" class="toolbar-title"><img alt="logo" id="header_logo" width="115" height="55" float-left src="./assets/images/CD.png"/></IonTitle>
           {/* <IonTitle><img alt="logo" id="header_logo" height="40" float-left src="../assets/images/CD.png"/>Craig's Donors</IonTitle> */}
           {/* <IonTitle><IonImg alt="Craigs Logo" src="../assests/images/CDN.png" />Craigs Donors</IonTitle> */}
           <IonButtons slot="secondary">
@@ -116,42 +116,46 @@ const Home: React.FC = () => {
           </IonItem>
         </IonList>
 
-        <IonText class="header-text">Popular causes</IonText>
-        <IonRow>
-          <IonCol class="btn-container">
-          <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
+        <IonGrid>
+        <IonRow class="row-style">
+            <IonCol class="col-style"><div>Popular Causes</div></IonCol>
+        </IonRow>       
+        
+        <IonRow class="row-style">
+            <IonCol class="col-style">
+            <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
             <IonIcon slot="start" icon={languageSharp} />
               Education
             </IonButton>
-          </IonCol>
-
-          <IonCol class="btn-container">
-          <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
+            </IonCol>
+            <IonCol class="col-style">
+            <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
             <IonIcon slot="start" icon={heartHalf} />
               Mental Health
             </IonButton>
-          </IonCol>
-
-          <IonCol class="btn-container">
-          <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
+            </IonCol>
+            <IonCol class="col-style">
+            <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
             <IonIcon slot="start" icon={medkit} />
               Health
             </IonButton>
-          </IonCol>
-
-          <IonCol class="btn-container">
-          <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
+            </IonCol>              
+            <IonCol class="col-style">
+            <IonButton class="btn-popular-causes" size = "large" expand="full" fill="solid">
             <IonIcon slot="start" icon={colorFill} />
               Clean Water
             </IonButton>
-          </IonCol>
-        </IonRow>
+            </IonCol>            
+        </IonRow>                               
+
+        </IonGrid>
+
 
       </IonContent>
       
       <IonFooter>
         <IonToolbar class="page-footer">      
-          <IonRow class="page-footer">
+          <IonRow>
             <IonCol>
               <IonButton color="light" expand="block" fill="clear">Privacy</IonButton>
             </IonCol>
@@ -165,7 +169,6 @@ const Home: React.FC = () => {
               <IonButton color="light" expand="block" fill="clear">Help</IonButton>
             </IonCol>                              
           </IonRow>
-
         </IonToolbar>
       </IonFooter>
 
