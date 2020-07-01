@@ -12,7 +12,7 @@ app.use('/api', require('./routes/api'));
 
 // init test route
 app.get('/hello', (req, res) => {
-    res.send('hello hello\n');
+    res.send('hello world\n');
 });
 
 // Serve static assets in production

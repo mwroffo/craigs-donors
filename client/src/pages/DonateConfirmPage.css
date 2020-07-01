@@ -25,7 +25,8 @@
 
   .toolbar-top {
     color: black;
-    --background: #ffc409;
+    /* --background: #ffc409; #ffeaa7 */
+    /* --background:#ffeaa7; */
   }
 
   .btnsignup {
@@ -37,9 +38,9 @@
   }
 
   .page-footer {
-    background-color: black;
+    --background: black;
     color: white;
-    height: 80px;
+    height: 50px;
   }
 
   .btn-container {
@@ -75,11 +76,6 @@
     font-size: 16px;
   }
 
-  .ion-title-top {
-    line-height: 40px;
-    padding-left: 50px;
-    background: url('../assets/images/CD.png') no-repeat left center;
-  }
 
   .list-trending {    
     /* width: 1200px; */
@@ -118,6 +114,53 @@
 
   .header-text {
     /* color: black; */
-    font-size: 50;
-    color: red;
+    font-size: 50px;
+    color: black;
+    align-content: center;
+    font-weight: bold;
+  }
+
+  .img-charity {
+    height: 300px;
+    width: 300px;    
+    /* min-height: 1px !important; */
+    background-color: black;
+  }
+
+
+  .img-container {
+    align-content: center;
+  }
+
+
+  .toolbar-title {
+    line-height: 40px;
+    padding-left: 50px;
+    padding-top: 5px;
+  }
+
+  .col-style {
+    background-color: #ffffff;
+    height: 80px;
+    font-weight: bold;
+    color: black;
+    font-size: 24px;    
+    /* border: solid 2px #ddd; */
+    padding: 10px;
+    text-align: center;
+    margin-left: 5px;
+  }
+
+  .row-style {
+    padding: 5px 5px 5px 5px;
+  }
+
+  .display-grid {
+    justify-content: center;
+    margin: 5px;
+    padding: 15px 15px 15px 15px;
+  }
+
+  .btn-donate {
+    width: 150px;
   }
