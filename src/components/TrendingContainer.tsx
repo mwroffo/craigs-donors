@@ -22,13 +22,51 @@ const TrendingContainer: React.FC<ContainerProps> = () => {
     <IonRow className="ion-justify-content-center">
         <IonList>
           <IonItem class="list-trending-item">
+            <IonGrid>
             <IonRow>
-              <h1>How can we do most good with limited resources? <br/>#EffectiveAltruism</h1>
+              <h1>How can we do most good with limited resources?</h1>
             </IonRow>                                
-            <IonRow><IonButton color="tertiary" class="btn-login">Join Discussion</IonButton></IonRow>            
+            <IonRow>
+              <IonCol size="4">#EffectiveAltruism</IonCol>
+              <IonCol size="4">57 Replies</IonCol>
+              <IonCol size="4">
+                <IonButton color="tertiary" size="small">Join Discussion</IonButton>
+              </IonCol>                        
+            </IonRow>
+            </IonGrid>            
           </IonItem>
 
           <IonItem class="list-trending-item">
+            <IonGrid>
+            <IonRow>
+              <h1>Join me to fight COVID-19 in third world!!!</h1>
+            </IonRow>                                
+            <IonRow>
+              <IonCol size="4">#COVID-19</IonCol>
+              <IonCol size="4">76 Replies</IonCol>
+              <IonCol size="4">
+                <IonButton color="tertiary" size="small">Join Discussion</IonButton>
+              </IonCol>                        
+            </IonRow>
+            </IonGrid>            
+          </IonItem>
+
+          <IonItem class="list-trending-item">
+            <IonGrid>
+            <IonRow>
+              <h1>New Renewable Energy Project starting...Join Us!</h1>
+            </IonRow>                                
+            <IonRow>
+              <IonCol size="4">#SAVEOURPLANET</IonCol>
+              <IonCol size="4">97 Replies</IonCol>
+              <IonCol size="4">
+                <IonButton color="tertiary" size="small">Join Discussion</IonButton>
+              </IonCol>                        
+            </IonRow>
+            </IonGrid>            
+          </IonItem>          
+
+          {/* <IonItem class="list-trending-item">
             <IonRow>
               <h1>Join me to fight COVID-19 in third world!!! <br/>#COVID-19</h1>            
             </IonRow>                                
@@ -40,7 +78,7 @@ const TrendingContainer: React.FC<ContainerProps> = () => {
               <h1>How can we do most good with limited resources? <br/>#EffectiveAltruism</h1>
             </IonRow>                                
             <IonRow><IonButton color="tertiary" class="btn-login">Join Discussion</IonButton></IonRow>            
-          </IonItem>
+          </IonItem> */}
 
         </IonList>
     </IonRow>

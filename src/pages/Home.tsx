@@ -2,7 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonIco
   IonItem, IonCard, IonCardContent, IonCardTitle, IonLabel, IonInput, IonImg } from '@ionic/react';
 import { IonGrid, IonRow, IonCol, IonFooter, IonText } from '@ionic/react';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical, 
-  medkit, colorFill, heartHalf , languageSharp} from 'ionicons/icons';
+  medkit, colorFill, heartHalf , languageSharp, notifications, logoFacebook, logoTwitter, logoInstagram} from 'ionicons/icons';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -54,8 +54,27 @@ const Home: React.FC = () => {
           </IonRow>
 
           <IonRow class="row-style">
-            <IonButton class="btnsignup" color="success">Continue with Facebook</IonButton>
+            <IonButton class="btnsignup" color="primary">Continue with Facebook</IonButton>
           </IonRow>                    
+
+          <IonRow class="row-style">
+              <IonCol size="4">
+                <IonButton size="small" fill="clear" class="btn-donate" color="tertiary">
+                  <IonIcon slot="start" icon={logoFacebook} />
+                </IonButton>
+              </IonCol>
+              <IonCol size="4">
+                <IonButton size="small" fill="clear" class="btn-donate" color="primary">
+                  <IonIcon slot="start" icon={logoTwitter} />
+                </IonButton>
+              </IonCol>
+              <IonCol size="4">
+                <IonButton size="small" fill="clear" class="btn-donate" color="warning">
+                  <IonIcon slot="start" icon={logoInstagram} />
+                </IonButton>
+              </IonCol>
+          </IonRow>
+
           </IonCol>
 
           {/* Sign In block */}
