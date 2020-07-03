@@ -10,5 +10,7 @@ import api from '../utils/api';
 export const getOrgById = orgId => async dispatch => {
     try {
         // TODO
+    } catch (err) {
+        
     }
 }
