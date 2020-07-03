@@ -30,11 +30,11 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonRouterOutlet>
         <Route path="/home" component={Home} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/home" />} />        
 
         <Route path="/donatepage" component={DonatePage} exact={true} />
 
         <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
-        {/* <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />         */}
 
       </IonRouterOutlet>
     </IonReactRouter>
