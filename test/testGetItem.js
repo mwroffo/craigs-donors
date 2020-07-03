@@ -2,6 +2,7 @@
 // usage: `node test/testGetItem`
 // purpose: perform a test fetch of a row from a table in database.
 
+const api = require('../client/src/utils/api')
 const AWS = require('aws-sdk');
 const connectDB = require('../config/db');
 connectDB();
@@ -26,4 +27,12 @@ docClient.get(params, function (err, data) {
     } else {
         console.log("GetItem succeeded:", JSON.stringify(data, null, 2));
     }
+});
+
+api.get('/cause', {
+    params: {
+        pk: 'COVID19'
+    }
+}).then(res => {
+    console.log(res.data);
 });

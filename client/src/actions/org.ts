@@ -6,3 +6,9 @@
 
 import api from '../utils/api';
 
+// Get Org by ID
+export const getOrgById = orgId => async dispatch => {
+    try {
+        // TODO
+    }
+}
