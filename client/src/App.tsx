@@ -5,6 +5,8 @@ import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 import DonatePage from './pages/DonatePage';
 import DonateConfirmPage from './pages/DonateConfirmPage';
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -24,8 +26,10 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+Amplify.configure(awsconfig);
 
 const App: React.FC = () => (
+
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
