@@ -5,11 +5,14 @@
   "private": true,
   "dependencies": {
     "@aws-amplify/ui-react": "^0.2.9",
+    "@capacitor/core": "^2.2.0",
+    "@ionic/cli": "^6.10.1",
     "@ionic/react": "^5.2.2",
     "@ionic/react-router": "^5.2.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "ionicons": "^5.0.0",
     "moment": "^2.24.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -20,13 +23,12 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "uuid": "^7.0.2",
-    "@capacitor/core": "^2.2.0",
-    "ionicons": "^5.0.0",
-    "typescript": "3.8.3"
+    "typescript": "3.8.3",
+    "uuid": "^7.0.2"
   },
   "scripts": {
-    "start": "ionic serve --port=3000",
+    "start": "./node_modules/@ionic/cli/bin/ionic serve --port=3000",
+    "start_deprecated": "ionic serve --port=3000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -50,7 +52,7 @@
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
-    "react-scripts": "^3.4.1",
-    "@capacitor/cli": "^2.2.0"
+    "@capacitor/cli": "^2.2.0",
+    "react-scripts": "^3.4.1"
   }
 }

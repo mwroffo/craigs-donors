@@ -1,8 +1,9 @@
 // filename: orgs.js
-// purpose: handle routes that get data about charities from db
+// purpose: provide Nodejs-based database endpoints to be 
+//          called by frontend components.
 
 // @route    GET api/orgs
-// @desc     Get all NGOs
+// @desc     Get all orgs (NGOs) in an array of json objects
 // @access   Private
 router.get('/', auth, async (req,res) => {
     try {
@@ -14,7 +15,7 @@ router.get('/', auth, async (req,res) => {
 })
 
 // @route    GET api/orgs/:id
-// @desc     Get NGO by ID
+// @desc     Get org as json object by id
 // @access   Private
 router.get('/', auth, async (req, res) => {
     try {
