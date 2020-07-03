@@ -1,10 +1,10 @@
-import axios from 'axios';
+const axios = require('axios');
 
 const api = axios.create({
-    baseURL: '/api',
+    baseURL: 'https://iws9pqk8ui.execute-api.us-east-1.amazonaws.com/v1',
     headers: {
         'Content-Type': 'application/json'
     }
 });
 
-export default api;
+module.exports = api;
