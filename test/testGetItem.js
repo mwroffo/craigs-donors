@@ -1,4 +1,5 @@
 // filename: testGetItem.js
+// usage: `node test/testGetItem`
 // purpose: perform a test fetch of a row from a table in database.
 
 const AWS = require('aws-sdk');
