@@ -50,12 +50,7 @@
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
-<<<<<<< HEAD
-    "gh-pages": "^3.1.0",
-    "react-scripts": "^3.4.0"
-=======
     "react-scripts": "^3.4.1",
     "@capacitor/cli": "^2.2.0"
->>>>>>> 3240262fe600f7226b7af47ba209f5904962e77e
   }
 }
