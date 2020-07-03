@@ -60,17 +60,19 @@ const Home: React.FC = () => {
               </IonItem>
 
               <IonItem>
-                <IonButton class="btnsignup" color="success">Continue with Facebook</IonButton>
+                <IonButton class="btnsignup" color="success" onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Facebook})}>Continue with Facebook</IonButton>
               </IonItem>                              
             </IonList>
           </IonCol>
-          <IonCol>          
+          <IonCol>
+
           <AmplifyAuthenticator>
               <div>
                 My App
                 <AmplifySignOut />
               </div>
           </AmplifyAuthenticator>
+
           <IonItem class="btn-charity-login">
                 {/* Charity?<IonButton color="clear">Log in here</IonButton> */}
                 <IonText color="dark">Charity?</IonText><IonButton class="btn-charity" size="small" color="clear">Log in here</IonButton>
