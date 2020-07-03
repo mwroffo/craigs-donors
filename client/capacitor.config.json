@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "craigs-d2",
+  "appName": "client2",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "build",

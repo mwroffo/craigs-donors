@@ -1,0 +1,10 @@
+{
+	"auth": {
+		"craigsdonorsd9d65abc": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}

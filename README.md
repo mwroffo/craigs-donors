@@ -1,12 +1,27 @@
 # craigs-donors
 
-## How to Docker
-do `cd craigs-donors`, then
-
-```docker build --tag craigs-donors:0.0.1 .```
-
-Finally, to launch server, do:
+## Be sure your deps are updated:
+From craigs-donors directory, do
 ```
-docker run --rm --publish 8080:8080 craigs-donors:0.0.1
+npm i # install backend deps
+cd client
+yarn # install frontend/client deps
 ```
-Include `--detach` to run in background.
+
+## test Express.js endpoint:
+```npm run server```
+```curl -i localhost:3000/hello```
+
+## launch React frontend:
+```npm run client```
+
+## full dev run:
+```npm run dev```
+
+## Test Node/dynamodb link:
+Open `test/testGetItem.js` then **edit the `params` variable as necessary for your particular dynamodb configuration, i.e. tables, primary keys, etc.**
+Finally, 
+```node test/testGetItem.js```
+should return JSON.
+
+See `scripts` in `package.json` for details on these launch scripts.

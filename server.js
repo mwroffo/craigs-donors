@@ -1,24 +1,30 @@
-var http = require('http');
-var fs = require('fs');
-var url = require('url');
+const express = require('express');
+const path = require('path');
+const connectDB = require('./config/db');
 
-const PUBLIC_IP = '3.12.25.70';
-const PRIVATE_IP = '0.0.0.0';
-const PORT = 8080;
-http.createServer( function (request, response) {
-  var pathname = url.parse(request.url).pathname;
-  console.log("Trying to find '" + pathname.substr(1) + "'...");
+const app = express();
 
-  fs.readFile(pathname.substr(1), function (err, data) {
-    if (err) {
-      response.writeHead(404, {'Content-Type': 'text/html'});
-      response.write("ERROR: Cannot find '" + pathname.substr(1) + "'.");
-      console.log("ERROR: Cannot find '" + pathname.substr(1) + "'.");
-    } else {
-      console.log("Found '" + pathname.substr(1) + "'.");
-      response.writeHead(200, {'Content-Type': 'text/html'});
-      response.write(data.toString());
-    }
-    response.end();
-  });
-}).listen(PORT, PRIVATE_IP);
+// initialize dynamodb
+connectDB();
+
+// link to backend
+app.use('/api', require('./routes/api'));
+
+// init test route
+app.get('/hello', (req, res) => {
+    res.send('hello world\n');
+});
+
+// Serve static assets in production
+if (process.env.NODE_ENV === 'production') {
+    // Set static folder
+    app.use(express.static('client/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Express listening on port ${PORT}`));
