@@ -3,7 +3,6 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonIco
 import { IonGrid, IonRow, IonCol, IonFooter, IonText } from '@ionic/react';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical, 
   medkit, colorFill, heartHalf , languageSharp} from 'ionicons/icons';
-import { Button} from 'react-bootstrap';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { withAuthenticator, AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
@@ -12,7 +11,9 @@ import Amplify, { Auth } from 'aws-amplify';
 import './Home.css';
 
 const federated = {
-  google_client_id: '813375056799-dtd6kq4lkpu5bl9eg3l8jjb9lhafdac5.apps.googleusercontent.com',
+  facebookAppId: '3278049522251731',
+  googleClientId: '813375056799-dtd6kq4lkpu5bl9eg3l8jjb9lhafdac5.apps.googleusercontent.com',
+  amazonClientId: '2p0l7o2lcnst4g39v9ktomaafp'
 };
 
 
@@ -48,14 +49,6 @@ const Home: React.FC = () => {
           <IonCol>
             <IonList lines="none" class="btn-container">
               <IonItem>
-                <IonButton class="btnsignup" color="warning">Continue with Amazon</IonButton>
-              </IonItem>
-
-              <IonItem>
-                <IonButton class="btnsignup" color="secondary">Continue with Twitter</IonButton>
-              </IonItem>
-
-              <IonItem>
                 <IonButton class="btnsignup" color="danger" onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Google})}>Continue with Google</IonButton>            
               </IonItem>
 
@@ -66,9 +59,9 @@ const Home: React.FC = () => {
           </IonCol>
           <IonCol>
 
-          <AmplifyAuthenticator>
+          <AmplifyAuthenticator federated={federated}>
               <div>
-                My App
+                You are signed in!
                 <AmplifySignOut />
               </div>
           </AmplifyAuthenticator>
