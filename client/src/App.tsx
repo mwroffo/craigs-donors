@@ -29,12 +29,26 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
+
+        {/* Testing of the Home Page */}
         <Route path="/home" component={Home} exact={true} />
+<<<<<<< HEAD:src/App.tsx
+        <Route exact path="/" render={() => <Redirect to="/home" />} />
+
+        {/* Testing of the Donate Page */}
+        {/* <Route path="/donatepage" component={DonatePage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/donatepage" />} /> */}
+
+        {/* Testing of the Donate Confirmation Page */}
+        {/* <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
+        <Route exact path="/" render={() => <Redirect to="/donateconfirmpage" />} />         */}
+=======
         <Route exact path="/" render={() => <Redirect to="/home" />} />        
 
         <Route path="/donatepage" component={DonatePage} exact={true} />
 
         <Route path="/donateconfirmpage" component={DonateConfirmPage} exact={true} />
+>>>>>>> staging:client/src/App.tsx
 
       </IonRouterOutlet>
     </IonReactRouter>
