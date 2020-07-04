@@ -15,7 +15,7 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 const params = {
     TableName: "charity",
     Key: {
-        "charityName": "The Battery Conservancy",
+        "charityName": "The Battery Conservancy", 
         "orgID": 6026
     }
 }
