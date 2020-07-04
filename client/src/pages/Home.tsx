@@ -3,12 +3,19 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonIco
 import { IonGrid, IonRow, IonCol, IonFooter, IonText } from '@ionic/react';
 import { personCircle, search, helpCircle, star, create, ellipsisHorizontal, ellipsisVertical, 
   medkit, colorFill, heartHalf , languageSharp} from 'ionicons/icons';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-
+import { withAuthenticator, AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth/lib/types";
+import Amplify, { Auth } from 'aws-amplify';
 import './Home.css';
+
+const federated = {
+  facebookAppId: '3278049522251731',
+  googleClientId: '813375056799-dtd6kq4lkpu5bl9eg3l8jjb9lhafdac5.apps.googleusercontent.com',
+  amazonClientId: '2p0l7o2lcnst4g39v9ktomaafp'
+};
+
 
 const Home: React.FC = () => {
   return (
@@ -42,46 +49,24 @@ const Home: React.FC = () => {
           <IonCol>
             <IonList lines="none" class="btn-container">
               <IonItem>
-                <IonButton class="btnsignup" color="warning">Continue with Amazon</IonButton>
+                <IonButton class="btnsignup" color="danger" onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Google})}>Continue with Google</IonButton>            
               </IonItem>
 
               <IonItem>
-                <IonButton class="btnsignup" color="secondary">Continue with Twitter</IonButton>
-              </IonItem>
-
-              <IonItem>
-                <IonButton class="btnsignup" color="danger">Continue with Google</IonButton>            
-              </IonItem>
-
-              <IonItem>
-                <IonButton class="btnsignup" color="success">Continue with Facebook</IonButton>
+                <IonButton class="btnsignup" color="success" onClick={() => Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Facebook})}>Continue with Facebook</IonButton>
               </IonItem>                              
             </IonList>
           </IonCol>
-
           <IonCol>
-            <IonCard class="signup-card">
-            <h1>Sign In</h1>
-              <IonCardContent>                  
-                <IonCardContent>
-                  <IonList lines="none">
-                    <IonItem>                      
-                      <IonInput type="email" placeholder="Email address"></IonInput>                        
-                    </IonItem>
-                    <IonItem>                        
-                      <IonInput type="password" placeholder="Password"></IonInput>                        
-                    </IonItem>
-                    <IonItem>
-                      <IonButton color="success" class="btn-login">Log In</IonButton>
-                    </IonItem>                      
-                    {/* <IonItem>
-                      Charity?<IonButton color="success">Log in here</IonButton>
-                    </IonItem>                     */}
-                  </IonList>
-                </IonCardContent>
-              </IonCardContent>              
-            </IonCard>
-            <IonItem class="btn-charity-login">
+
+          <AmplifyAuthenticator federated={federated}>
+              <div>
+                You are signed in!
+                <AmplifySignOut />
+              </div>
+          </AmplifyAuthenticator>
+
+          <IonItem class="btn-charity-login">
                 {/* Charity?<IonButton color="clear">Log in here</IonButton> */}
                 <IonText color="dark">Charity?</IonText><IonButton class="btn-charity" size="small" color="clear">Log in here</IonButton>
             </IonItem>            
