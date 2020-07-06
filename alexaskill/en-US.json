@@ -1,0 +1,64 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "craigs help",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "NonProfitsPurpose",
+                    "slots": [
+                        {
+                            "name": "nonprofits",
+                            "type": "NONPROFITS_INFO"
+                        }
+                    ],
+                    "samples": [
+                        "ask helper craig  on {nonprofits}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "NONPROFITS_INFO",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "nonprofitslist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "thelark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ahrcnewyorkcityfoundation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "equaljusticeamerica"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

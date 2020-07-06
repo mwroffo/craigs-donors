@@ -7,6 +7,8 @@ import DonatePage from './pages/DonatePage';
 import DonateConfirmPage from './pages/DonateConfirmPage';
 import TrendingPage from './pages/TrendingPage'
 
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -26,14 +28,17 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+Amplify.configure(awsconfig);
 
 const App: React.FC = () => (
+
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
 
         {/* Testing of the Home Page */}
         <Route path="/home" component={Home} exact={true} />
+
         <Route exact path="/" render={() => <Redirect to="/home" />} />
 
         {/* Testing of the Donate Page */}
@@ -47,6 +52,7 @@ const App: React.FC = () => (
         {/* Testing of the Donate Confirmation Page */}
         <Route path="/trendingpage" component={TrendingPage} exact={true} />
         <Route exact path="/" render={() => <Redirect to="/trendingpage" />} />        
+
 
 
       </IonRouterOutlet>
