@@ -30,7 +30,7 @@
   "scripts": {
     "start": "./node_modules/@ionic/cli/bin/ionic serve --port=3000",
     "start_deprecated": "ionic serve --port=3000",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
