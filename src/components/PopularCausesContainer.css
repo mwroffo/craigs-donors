@@ -1,0 +1,60 @@
+.container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.btn-popular-causes {
+  width: 260px;
+  height: 150px;
+  --background: black;
+  --color: white;
+  padding: 0px 5px 15px 20px;
+  margin-bottom: 50px;
+}
+
+.btn-container {
+  align-content: center;
+  padding-left: 150px;
+}
+
+.display-grid {
+  justify-content: center;
+  margin: 5px;
+  padding: 15px 15px 15px 15px;
+}  
+
+.row-style {
+  padding: 5px 5px 5px 5px;
+}  
+
+.col-style {
+  background-color: #ffffff;
+  height: 80px;
+  font-weight: bold;
+  color: black;
+  font-size: 24px;    
+  /* border: solid 2px #ddd; */
+  padding: 10px;
+  text-align: center;
+  margin-left: 5px;
+}

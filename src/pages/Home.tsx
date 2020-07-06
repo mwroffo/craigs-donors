@@ -11,6 +11,8 @@ import ReactDOM from 'react-dom';
 import './Home.css';
 import ExploreContainer from '../components/ExploreContainer';
 import TrendingContainer from '../components/TrendingContainer';
+import FooterContainer from '../components/FooterContainer';
+import PopularCausesContainer from '../components/PopularCausesContainer';
 
 const Home: React.FC = () => {
   return (
@@ -91,27 +93,15 @@ const Home: React.FC = () => {
         <TrendingContainer/>
 
         </IonGrid>
-                
+
+        {/* Popular Causes */}
+        <PopularCausesContainer />
+
       </IonContent>
       
-      <IonFooter>
-        <IonToolbar class="page-footer">      
-          <IonRow>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Privacy</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Sitemap</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Terms</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Help</IonButton>
-            </IonCol>                              
-          </IonRow>
-        </IonToolbar>
-      </IonFooter>
+      {/* Footer container here */}
+      <FooterContainer/>
+
 
     </IonPage>
   );

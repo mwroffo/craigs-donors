@@ -9,6 +9,7 @@ import ReactDOM from 'react-dom';
 
 
 import './DonateConfirmPage.css';
+import FooterContainer from '../components/FooterContainer';
 
 const DonateConfirmPage: React.FC = () => {
   return (
@@ -60,24 +61,8 @@ const DonateConfirmPage: React.FC = () => {
 
       </IonContent>
       
-      <IonFooter>
-        <IonToolbar class="page-footer">      
-          <IonRow>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Privacy</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Sitemap</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Terms</IonButton>
-            </IonCol>
-            <IonCol>
-              <IonButton color="light" expand="block" fill="clear">Help</IonButton>
-            </IonCol>                              
-          </IonRow>
-        </IonToolbar>
-      </IonFooter>
+      {/* Footer container here */}
+      <FooterContainer/>      
 
     </IonPage>
   );

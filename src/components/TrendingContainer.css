@@ -81,17 +81,16 @@ h1 {
 }
 
 .list-trending {    
-  /* width: 1200px; */
-  width: 80%;
   margin-left: 200px;
-  /* padding-left: 20px; */
 }
 
 .list-trending-item {    
-  /* height: 300px; */
-  max-height: 200px;
+  max-height: 115px;
   color: black;
   --background: #ffeaa7;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-popular-causes {
