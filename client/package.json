@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "aws-sdk": "^2.707.0",
+    "config": "^3.3.1",
     "@aws-amplify/ui-react": "^0.2.9",
     "@capacitor/core": "^2.2.0",
     "@ionic/cli": "^6.10.1",

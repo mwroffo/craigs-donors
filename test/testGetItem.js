@@ -9,8 +9,8 @@ const connectDB = require('../config/db');
 connectDB();
 const docClient = new AWS.DynamoDB.DocumentClient();
 
-const charity = require('../api/charity');
-const cause = require('../api/cause');
+const charity = require('../client/src/api/charity');
+const cause = require('../client/src/api/cause');
 // ------------------------------------------------------
 // Configure docClient to get some row in some table in your database:
 // YOU SHOULD EDIT these fields as appropriate.
@@ -53,7 +53,10 @@ options = {
 // org.getOrgs().then(data => console.log(data));
 
 // charity.getById(6026).then(data => console.log(data));
-// charity.getAll().then(data => console.log(data));
 
-cause.getById('COVID19').then(data => console.log(data));
-cause.getAll().then(data => console.log(data));
+charity.getAll().then(Items => {
+    console.log(Items[6])
+});
+
+// cause.getById('COVID19').then(data => console.log(data));
+// cause.getAll().then(data => console.log(data));
