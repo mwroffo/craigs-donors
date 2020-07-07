@@ -103,6 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
+# Ionic / Capacitor build folder
+build/
 Michael.Roffo_accessKeys.csv
 config/default.json
 config/production.json

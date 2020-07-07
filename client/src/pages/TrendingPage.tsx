@@ -9,6 +9,7 @@ import ReactDOM from 'react-dom';
 
 
 import './DonatePage.css';
+import TrendingContainer from '../components/TrendingContainer';
 import FooterContainer from '../components/FooterContainer';
 
 const DonatePage: React.FC = () => {
@@ -36,29 +37,8 @@ const DonatePage: React.FC = () => {
       </IonHeader>
 
       <IonContent>                                
-          <IonGrid class="display-grid">
-            <IonRow class="row-style">
-              <IonCol class="col-style"><div>Donate to Homeless Entrepreneur</div></IonCol>
-            </IonRow>
-            <IonRow class="row-style">
-              <IonCol></IonCol>
-              <IonImg class="img-charity" src="./assets/images/homeless_entrepreneur.png" />
-              <IonCol></IonCol>              
-            </IonRow>
-            <IonRow class="row-style">
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$5</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$10</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$20</IonButton></IonCol>              
-            </IonRow>
-            <IonRow class="row-style">
-            <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$50</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$100</IonButton></IonCol>
-              <IonCol class="col-style"><IonButton size="large" class="btn-donate" color="warning">$200</IonButton></IonCol>              
-            </IonRow>            
-            <IonRow class="row-style">              
-              <IonCol class="col-style" size="4" offset="4" ><IonButton size="large" color="warning">Pay with Amazon Pay</IonButton></IonCol>
-            </IonRow>                        
-          </IonGrid>
+        {/* Trending Items here */}
+        <TrendingContainer/>
 
       </IonContent>
       
