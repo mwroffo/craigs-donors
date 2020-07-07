@@ -1,10 +1,7 @@
-FROM beevelop/ionic:latest
-
-# Create app directory
-WORKDIR /usr/src/app
-
-# Bundle app source
-COPY . .
-
-EXPOSE 8080
-CMD [ "ionic", "serve" ]
+FROM node:10
+WORKDIR /app
+COPY . /app
+RUN cd /app/client && yarn
+RUN npm install
+EXPOSE 3000 5000
+CMD ["npm", "run", "dev"]
