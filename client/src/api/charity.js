@@ -4,10 +4,9 @@
 // `charity.getById( ... ).then( ... )` etc.
 // alternatively `await org.getOrgById( ... );`
 
-'use strict';
-const api = require('../client/src/utils/api');
+const api = require('../utils/api');
 const AWS = require('aws-sdk');
-const connectDB = require('../config/db');
+const connectDB = require('../db');
 connectDB();
 const docClient = new AWS.DynamoDB.DocumentClient();
 
@@ -30,7 +29,8 @@ const getAll = async () => {
         const params = {
             TableName: 'charity'
         };
-        return await docClient.scan(params).promise();
+        const res = await docClient.scan(params).promise();
+        return res.Items;
     } catch (err) { throw err }
 };
 
